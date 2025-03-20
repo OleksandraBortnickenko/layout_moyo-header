@@ -1,0 +1,91 @@
+html{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+.header{
+  position: relative;
+  padding: 0 20px 0 20px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: rgb(125, 156, 13);
+}
+
+.header__title{
+  font-size: 2rem;
+  font-weight: normal;
+  color: rgb(0, 0, 0);
+}
+
+.header__list{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.header__link{
+  color: rgb(0, 0, 0);
+}
+
+.header__link:hover {
+  color: #ebc700;
+}
+
+.header__checkbox{
+  display: none;
+}
+
+@media screen and (max-width: 768px){
+  .header__checkbox{
+    display: block;
+  }
+
+  .header__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    overflow: hidden;
+    height: 0;
+    flex-direction: column;
+    background-color: rgb(125, 156, 13);
+  }
+
+  .header__checkbox:checked ~ .header__list {
+    height: auto;
+  }
+}
+
+.footer {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  position: sticky;
+  bottom: 0;
+  z-index: -1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 500px;
+
+  color: rgb(125, 156, 13);;
+  background-image: url(https://res.cloudinary.com/gimmersta-wallpaper/image/upload/c_fill,f_auto,fl_progressive,q_auto,h_1200/v1713946723/articles/AR0045DA03W_product.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
